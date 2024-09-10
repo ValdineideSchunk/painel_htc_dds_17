@@ -1,2 +1,2 @@
-## painel escolar turma HTC DDS 3 17
-## instrutor Ramon de Holanda
+## Painel Escolar Turma HTC DDS 3 17
+## Instrutor Ramon de Holanda
