@@ -1,4 +1,6 @@
 import { useEffect,useState } from "react";
+import styles from './Saudacao.module.css';
+
 function Saudacao(){
     //Criando estado da saudação
     const [saudacaoPeriodo, setSaudacaoPeriodo] = useState('')
@@ -42,12 +44,11 @@ function Saudacao(){
         }else{
             textoSaudacao +=' - Boa madrugada!'
         }
-
         setSaudacaoPeriodo(textoSaudacao);
     }
     return(
-    <h1>{saudacaoPeriodo}</h1>
+    <div className={styles.saudacao}>{saudacaoPeriodo}</div>
     )
-}
+} 
 
 export default Saudacao;

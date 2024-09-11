@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import styles from './Relogio.module.css';
 
 function Relogio() {
     const [hora,setHora] = useState('');
@@ -26,8 +27,8 @@ function Relogio() {
     }
   return (
     //Chamando constante horA
-    <div>{hora}</div>
+    <div className={styles.relogio}>{hora}</div>
   )
 }
 
-export default Relogio
+export default Relogio;
