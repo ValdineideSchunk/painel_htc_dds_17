@@ -1,0 +1,14 @@
+
+.tabela {
+    text-align: center;
+    padding: 15px;
+    width: 80%; /* Faz a tabela ocupar 80% da largura do contêiner pai */
+    border-collapse: collapse; /* Remove espaços entre bordas das células */
+    margin: 5px 0; /* Adiciona uma margem superior e inferior */
+}
+
+.cabecalhoTabela {
+    background-color: rgb(69, 104, 195);
+    color: white; 
+    width: 100%;
+  }
