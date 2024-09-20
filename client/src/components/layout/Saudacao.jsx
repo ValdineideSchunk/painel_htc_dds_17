@@ -36,13 +36,13 @@ function Saudacao(){
         textoSaudacao += diaSemana[dia];
 
         if(hora >=18){
-            textoSaudacao +=' - Boa noite!'
+            textoSaudacao +=' - Boa noite'
         }else  if(hora >=12){
-            textoSaudacao +=' - Boa Tarde!'
+            textoSaudacao +=' - Boa Tarde'
         }else  if(hora >=6){
-            textoSaudacao +=' - Bom dia!'
+            textoSaudacao +=' - Bom dia'
         }else{
-            textoSaudacao +=' - Boa madrugada!'
+            textoSaudacao +=' - Boa madrugada'
         }
         setSaudacaoPeriodo(textoSaudacao);
     }

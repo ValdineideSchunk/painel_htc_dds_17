@@ -25,3 +25,9 @@
 .tabelaAulas th {
   padding: 4px;
 }
+
+@media(max-width:768px){
+  .aulas{
+    width: 100%;
+  }
+}

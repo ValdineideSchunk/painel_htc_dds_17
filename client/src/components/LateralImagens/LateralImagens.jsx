@@ -1,10 +1,15 @@
 import { useEffect, useState } from 'react';
 import styles from './LateralImagens.module.css';
+import Loading from '../layout/Loading';
 
 function LateralImagens() {
   const [imagens, setimagens] = useState([]);
+  const [removeLoading,setRemoveLoading]= useState(false);
+
   useEffect(() => {
-    carregarImagens();
+    setTimeout(() => {
+      carregarImagens();
+    }, 300);
   }, []);
 
   async function carregarImagens() {
@@ -20,6 +25,7 @@ function LateralImagens() {
       }
       const consulta = await resposta.json();
       setimagens(consulta);
+      setRemoveLoading(true)
     } catch (error) {
       console.log('Error ao consultar aulas', error);
     }
@@ -31,7 +37,9 @@ function LateralImagens() {
           <img src={imagem.caminho} alt={imagem.alt} />
         </div>
       ))}
+      {!removeLoading && <Loading/>}
     </div>
+    
   );
 }
 

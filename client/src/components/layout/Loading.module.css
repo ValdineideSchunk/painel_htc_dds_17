@@ -1,0 +1,11 @@
+.loader_componente{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader_componente img{
+    width: 100px;
+}

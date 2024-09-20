@@ -5,12 +5,16 @@ import AbreviaData from './AbreviaData';
 import AbreviaNomeInstrutor from './AbreviaNomeInstrutor';
 import AbreviaUnidadeCurricular from './AbreviaUnidadeCurricular';
 import AbreviaAmbiente from './AbreviaAmbiente';
+import Loading from '../layout/Loading';
 
 function TabelaAulas() {
   const [aulas, setAulas] = useState([]);
+  const [removeLoading,setRemoveLoading]= useState(false);
 
   useEffect(() => {
-    carregarAulas();
+    setTimeout(() => {
+      carregarAulas();
+    }, 300);
   }, []);
 
   async function carregarAulas() {
@@ -27,14 +31,18 @@ function TabelaAulas() {
 
       const consulta = await resposta.json();
       setAulas(consulta);
-      console.log(consulta);
+      setRemoveLoading(true)
+      //console.log(consulta);
+
     } catch (error) {
       console.log('erro ao buscar aulas', error);
     }
   }
 
   return (
+    
     <div className={styles.aulas}>
+    
       <table className={styles.tabelaAulas}>
         <thead>
           <tr>
@@ -47,6 +55,7 @@ function TabelaAulas() {
           </tr>
         </thead>
         <tbody>
+          
           {aulas.map((aula) => (
             <tr key={aula.id}>
               <td>{<AbreviaData data={aula.data_hora_inicio} />}</td>
@@ -66,7 +75,10 @@ function TabelaAulas() {
           ))}
         </tbody>
       </table>
+      {!removeLoading && <Loading/>}
+      {removeLoading && aulas.length === 0 && <h1>Não há aulas disponivel</h1>}
     </div>
+    
   );
 }
 
