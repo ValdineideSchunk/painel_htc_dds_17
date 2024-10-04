@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../layout/Navbar';
-import { Link } from 'react-router-dom';
+import { Await, Link } from 'react-router-dom';
 
 function CadastroAulas() {
   const [dataAula, setDataAula] = useState('');
@@ -10,18 +10,48 @@ function CadastroAulas() {
   const [instrutor, setInstrutor] = useState('');
   const [unidadeCurricular, setUnidadeCurricular] = useState('');
   const [ambiente, setAmbiente] = useState('');
-  const [infoAulas, setInfoAulas] = useState('');
+  
+
+  //Função temporaria para cadastrar datas
+  function formatDataHora(data,hora){
+    const dataHora = `${data}T${hora}:00.000Z`;
+    return dataHora;
+  }
 
 
   async function cadastarAula(e) {
     e.preventDefault();
-    console.log(dataAula);
-    console.log(horaInicio);
-    console.log(horaFim);
-    console.log(turma);
-    console.log(instrutor);
-    console.log(unidadeCurricular);
-    console.log(ambiente);
+    const infoAula ={
+      data:formatDataHora(dataAula, '00:00'),
+      data_hora_inicio:formatDataHora(dataAula, horaInicio),
+      data_hora_fim:formatDataHora(dataAula, horaFim),
+      turma:turma,
+      instrutor:instrutor,
+      unidade_curricular:unidadeCurricular,
+      ambiente:ambiente,
+      chave:null
+    }
+
+    try{
+      //o POST é usado para inserir elementos na API
+      const resposta = await fetch('http://localhost:5000/aulas',{
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json'
+        },body:JSON.stringify(infoAula)
+
+      })
+
+      if(!resposta.ok){
+        console.log('erro ao criar aula');
+
+      }else{
+        alert('Aula cadastrada');
+      }
+    }catch (error) {
+      console.log('erro no cadastro de aula',error)
+    }
+  
   }
   return (
     <div>

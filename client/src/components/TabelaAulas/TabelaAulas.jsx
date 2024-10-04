@@ -7,7 +7,7 @@ import AbreviaUnidadeCurricular from './AbreviaUnidadeCurricular';
 import AbreviaAmbiente from './AbreviaAmbiente';
 import Loading from '../layout/Loading';
 
-function TabelaAulas() {
+function TabelaAulas({tipo}) {
   const [aulas, setAulas] = useState([]);
   const [removeLoading,setRemoveLoading]= useState(false);
 
@@ -41,7 +41,7 @@ function TabelaAulas() {
 
   return (
     
-    <div className={styles.aulas}>
+    <div className={`${styles.aulas} ${tipo==='edit'? styles.edit:''}`}>
     
       <table className={styles.tabelaAulas}>
         <thead>
@@ -52,6 +52,7 @@ function TabelaAulas() {
             <th>Instrutor</th>
             <th>Unidade Curricular</th>
             <th>Ambiente</th>
+            {tipo==='edit' && <th>Ações</th>}
           </tr>
         </thead>
         <tbody>
@@ -71,6 +72,12 @@ function TabelaAulas() {
               </td>
 
               <td>{<AbreviaAmbiente nomeAmbiente={aula.ambiente} />}</td>
+              {tipo === 'edit' && ( 
+                <td className='bg-light'>
+                <button className='btn btn-warning'>Editar</button>
+                <button className='btn btn-danger ms-2'>Deletar</button>
+              </td>
+            )}
             </tr>
           ))}
         </tbody>
