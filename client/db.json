@@ -12,15 +12,15 @@
       "chave": null
     },
     {
-      "id": "1280",
-      "data": "2024-08-29T03:00:00.000Z",
-      "data_hora_inicio": "2024-08-29T21:00:00.000Z",
-      "data_hora_fim": "2024-08-30T01:00:00.000Z",
+      "data": "T00:00:00.000Z",
+      "data_hora_inicio": "T:00.000Z",
+      "data_hora_fim": "T:00.000Z",
       "turma": "UMO-MBMM-03",
-      "instrutor": "THADEU VASCONCELOS DA SILVA GOMES",
+      "instrutor": "THADEU VASCONCELOS DA SILVA ",
       "unidade_curricular": "MECÂNICA BÁSICA DE MOTORES DE MOTOCICLETAS (CH: 100.0000)",
       "ambiente": "VTRIA-EXTER-EXTERNO",
-      "chave": null
+      "chave": null,
+      "id": "1280"
     },
     {
       "id": "1326",
@@ -34,48 +34,15 @@
       "chave": null
     },
     {
-      "id": "5939",
-      "data": "2024-10-03T00:00:00.000Z",
-      "data_hora_inicio": "2024-10-03T18:30:00.000Z",
-      "data_hora_fim": "2024-10-03T20:00:00.000Z",
+      "data": "T00:00:00.000Z",
+      "data_hora_inicio": "T:00.000Z",
+      "data_hora_fim": "T:00.000Z",
       "turma": "HTC-MEC-4-92",
-      "instrutor": "AFONSO DE JESUS CORDEIRO",
+      "instrutor": "Ney Schunk",
       "unidade_curricular": "DESENVOLVIMENTO DE SISTEMAS DE AUTOMAÇÃO MECÂNICA (CH: 100.0000)",
       "ambiente": "VTRIA-3-LAB-3003",
-      "chave": null
-    },
-    {
-      "id": "98d2",
-      "data": "2024-10-03T00:00:00.000Z",
-      "data_hora_inicio": "2024-10-03T18:30:00.000Z",
-      "data_hora_fim": "2024-10-03T20:00:00.000Z",
-      "turma": "HTC-MEC-4-92",
-      "instrutor": "AFONSO",
-      "unidade_curricular": "DESENVOLVIMENTO DE SISTEMAS DE AUTOMAÇÃO MECÂNICA (CH: 100.0000)",
-      "ambiente": "VTRIA-3-LAB-350",
-      "chave": null
-    },
-    {
-      "id": "3eb9",
-      "data": "2024-10-03T00:00:00.000Z",
-      "data_hora_inicio": "2024-10-03T18:30:00.000Z",
-      "data_hora_fim": "2024-10-03T20:00:00.000Z",
-      "turma": "HTC-MEC-4-92",
-      "instrutor": "AFONSO",
-      "unidade_curricular": "DESENVOLVIMENTO DE SISTEMAS DE AUTOMAÇÃO MECÂNICA (CH: 100.0000)",
-      "ambiente": "VTRIA-3-LAB-350",
-      "chave": null
-    },
-    {
-      "id": "cfe0",
-      "data": "2024-10-03T00:00:00.000Z",
-      "data_hora_inicio": "2024-10-03T18:30:00.000Z",
-      "data_hora_fim": "2024-10-03T20:00:00.000Z",
-      "turma": "HTC-MEC-4-92",
-      "instrutor": "AFONSO batista",
-      "unidade_curricular": "DESENVOLVIMENTO DE SISTEMAS DE AUTOMAÇÃO MECÂNICA (CH: 100.0000)",
-      "ambiente": "VTRIA-3-LAB-350",
-      "chave": null
+      "chave": null,
+      "id": "5939"
     }
   ],
   "imagens": [

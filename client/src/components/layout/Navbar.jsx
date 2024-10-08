@@ -17,7 +17,7 @@ function Navbar() {
             <Link className='nav-link' to="/login">Login</Link>
           </li>
           <li className='nav-item'>
-            <Link className='nav-link' to="/cadastro_aulas">Cadastro Aulas</Link>
+            <Link className='nav-link' to="/gestao_aulas">Gestão Aulas</Link>
           </li>
         </ul>
       </nav>
