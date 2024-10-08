@@ -32,17 +32,6 @@
       "unidade_curricular": "DESENVOLVIMENTO DE SISTEMAS DE AUTOMAÇÃO MECÂNICA (CH: 100.0000)",
       "ambiente": "VTRIA-3-LAB-3003",
       "chave": null
-    },
-    {
-      "data": "T00:00:00.000Z",
-      "data_hora_inicio": "T:00.000Z",
-      "data_hora_fim": "T:00.000Z",
-      "turma": "HTC-MEC-4-92",
-      "instrutor": "Ney Schunk",
-      "unidade_curricular": "DESENVOLVIMENTO DE SISTEMAS DE AUTOMAÇÃO MECÂNICA (CH: 100.0000)",
-      "ambiente": "VTRIA-3-LAB-3003",
-      "chave": null,
-      "id": "5939"
     }
   ],
   "imagens": [
