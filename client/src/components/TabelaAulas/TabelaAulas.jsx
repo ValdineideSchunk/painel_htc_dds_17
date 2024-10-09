@@ -8,7 +8,7 @@ import AbreviaUnidadeCurricular from './AbreviaUnidadeCurricular';
 import AbreviaAmbiente from './AbreviaAmbiente';
 import Loading from '../layout/Loading';
 
-function TabelaAulas({ tipo }) {
+function TabelaAulas({ tipo, onDeleteSuccess }) {
   const [aulas, setAulas] = useState([]);
   const [removeLoading, setRemoveLoading] = useState(false);
 
@@ -51,8 +51,9 @@ function TabelaAulas({ tipo }) {
         const error = await resposta.json();
         throw new Error('Erro ao Deletar Usuario', error);
       } else {
-        alert('Aula deletada');
+        //alert('Aula deletada');
         setAulas(aulas.filter((aula) => aula.id !== id));
+        onDeleteSuccess();
       }
     } catch (error) {
       throw new Error('Erro ao Deletar Usuario', error);

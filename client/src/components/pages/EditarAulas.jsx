@@ -20,7 +20,7 @@ function EditarAula() {
         console.log('erro ao editar aula');
 
       }else{
-        alert('Aula editada');
+        //alert('Aula editada');
       }
     }catch (error) {
       console.log('erro au editar aula',error)
@@ -29,7 +29,7 @@ function EditarAula() {
   return (
     <div>
       <Navbar />
-      <FormAula titulo='Editar Aula' txtBtn='Salvar' id={id} handleSubmit={aditAula}/>
+      <FormAula titulo='Editar Aula' txtBtn='Salvar' id={id} tipo='editada' handleSubmit={aditAula}/>
     </div>
   );
 }
