@@ -18,7 +18,7 @@ function CadastroAulas() {
         console.log('erro ao criar aula');
 
       }else{
-        //alert('Aula cadastrada');
+        alert('Aula cadastrada');
       }
     }catch (error) {
       console.log('erro no cadastro de aula',error)
@@ -27,7 +27,7 @@ function CadastroAulas() {
   return (
     <div>
       <Navbar />
-      <FormAula titulo='Cadastro Aula' txtBtn='Cadastrar'tipo='cadastrada' handleSubmit={cadastarAula}/>
+      <FormAula titulo='Cadastro Aula' txtBtn='Cadastrar' handleSubmit={cadastarAula}/>
     </div>
   );
 }
