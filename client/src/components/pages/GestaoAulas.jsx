@@ -16,7 +16,7 @@ function GestaoAulas() {
       tipoMensagem();
       setTimeout(()=>{
         setMostraMensage(false);
-        setTipoAlterado(' ');
+        setTipoAlterado('');
       },5000)
     }
   },[tipoAlterado])
